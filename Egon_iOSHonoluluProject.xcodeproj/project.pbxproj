@@ -13,6 +13,13 @@
 		49AA804E23E1793A00276AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AA804C23E1793A00276AFD /* Main.storyboard */; };
 		49AA805023E1793D00276AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AA804F23E1793D00276AFD /* Assets.xcassets */; };
 		49AA805323E1793D00276AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AA805123E1793D00276AFD /* LaunchScreen.storyboard */; };
+		49AA805C23E1795800276AFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AA805B23E1795800276AFD /* MapKit.framework */; };
+		49AA805E23E17A1500276AFD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49AA805D23E17A1500276AFD /* Settings.bundle */; };
+		49AA806223E1840100276AFD /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806123E1840100276AFD /* DAO.swift */; };
+		49AA806423E184C800276AFD /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806323E184C800276AFD /* Artwork.swift */; };
+		49AA806823E18D4300276AFD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806723E18D4300276AFD /* TableViewController.swift */; };
+		49AA806A23E18E1900276AFD /* ArtworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806923E18E1900276AFD /* ArtworkTableViewCell.swift */; };
+		49AA806C23E1D86C00276AFD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		49AA804F23E1793D00276AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49AA805223E1793D00276AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AA805423E1793D00276AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AA805B23E1795800276AFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		49AA805D23E17A1500276AFD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		49AA806123E1840100276AFD /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		49AA806323E184C800276AFD /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		49AA806723E18D4300276AFD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		49AA806923E18E1900276AFD /* ArtworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkTableViewCell.swift; sourceTree = "<group>"; };
+		49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49AA805C23E1795800276AFD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +55,10 @@
 		49AA803A23E1793A00276AFD = {
 			isa = PBXGroup;
 			children = (
+				49AA805D23E17A1500276AFD /* Settings.bundle */,
 				49AA804523E1793A00276AFD /* Egon_iOSHonoluluProject */,
 				49AA804423E1793A00276AFD /* Products */,
+				49AA805A23E1795800276AFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,44 @@
 		49AA804523E1793A00276AFD /* Egon_iOSHonoluluProject */ = {
 			isa = PBXGroup;
 			children = (
+				49AA806023E1816800276AFD /* controllers */,
+				49AA805F23E1816200276AFD /* model */,
 				49AA804623E1793A00276AFD /* AppDelegate.swift */,
 				49AA804823E1793A00276AFD /* SceneDelegate.swift */,
-				49AA804A23E1793A00276AFD /* ViewController.swift */,
 				49AA804C23E1793A00276AFD /* Main.storyboard */,
 				49AA804F23E1793D00276AFD /* Assets.xcassets */,
 				49AA805123E1793D00276AFD /* LaunchScreen.storyboard */,
 				49AA805423E1793D00276AFD /* Info.plist */,
+				49AA806923E18E1900276AFD /* ArtworkTableViewCell.swift */,
 			);
 			path = Egon_iOSHonoluluProject;
+			sourceTree = "<group>";
+		};
+		49AA805A23E1795800276AFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49AA805B23E1795800276AFD /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49AA805F23E1816200276AFD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				49AA806123E1840100276AFD /* DAO.swift */,
+				49AA806323E184C800276AFD /* Artwork.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		49AA806023E1816800276AFD /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49AA804A23E1793A00276AFD /* ViewController.swift */,
+				49AA806723E18D4300276AFD /* TableViewController.swift */,
+				49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49AA805E23E17A1500276AFD /* Settings.bundle in Resources */,
 				49AA805323E1793D00276AFD /* LaunchScreen.storyboard in Resources */,
 				49AA805023E1793D00276AFD /* Assets.xcassets in Resources */,
 				49AA804E23E1793A00276AFD /* Main.storyboard in Resources */,
@@ -138,6 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49AA806423E184C800276AFD /* Artwork.swift in Sources */,
+				49AA806823E18D4300276AFD /* TableViewController.swift in Sources */,
+				49AA806C23E1D86C00276AFD /* ArtDetailViewController.swift in Sources */,
+				49AA806223E1840100276AFD /* DAO.swift in Sources */,
+				49AA806A23E18E1900276AFD /* ArtworkTableViewCell.swift in Sources */,
 				49AA804B23E1793A00276AFD /* ViewController.swift in Sources */,
 				49AA804723E1793A00276AFD /* AppDelegate.swift in Sources */,
 				49AA804923E1793A00276AFD /* SceneDelegate.swift in Sources */,
@@ -293,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eb.egonb.Egon-iOSHonoluluProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eb.egonb.Egon-iOSHonoluluProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
