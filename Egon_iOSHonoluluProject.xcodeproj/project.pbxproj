@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4989035D23E2D9E70055BF02 /* honolulushizzle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */; };
 		49AA804723E1793A00276AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804623E1793A00276AFD /* AppDelegate.swift */; };
 		49AA804923E1793A00276AFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804823E1793A00276AFD /* SceneDelegate.swift */; };
 		49AA804B23E1793A00276AFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804A23E1793A00276AFD /* ViewController.swift */; };
@@ -20,9 +21,11 @@
 		49AA806823E18D4300276AFD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806723E18D4300276AFD /* TableViewController.swift */; };
 		49AA806A23E18E1900276AFD /* ArtworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806923E18E1900276AFD /* ArtworkTableViewCell.swift */; };
 		49AA806C23E1D86C00276AFD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */; };
+		49AA806E23E2CB7700276AFD /* HonoluluFlag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49AA806D23E2CB7700276AFD /* HonoluluFlag.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "honolulushizzle-2.png"; sourceTree = "<group>"; };
 		49AA804323E1793A00276AFD /* Egon_iOSHonoluluProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Egon_iOSHonoluluProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AA804623E1793A00276AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AA804823E1793A00276AFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		49AA806723E18D4300276AFD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		49AA806923E18E1900276AFD /* ArtworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkTableViewCell.swift; sourceTree = "<group>"; };
 		49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
+		49AA806D23E2CB7700276AFD /* HonoluluFlag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HonoluluFlag.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4989035E23E2E0DF0055BF02 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */,
+				49AA806D23E2CB7700276AFD /* HonoluluFlag.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		49AA803A23E1793A00276AFD = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 		49AA804523E1793A00276AFD /* Egon_iOSHonoluluProject */ = {
 			isa = PBXGroup;
 			children = (
+				4989035E23E2E0DF0055BF02 /* images */,
 				49AA806023E1816800276AFD /* controllers */,
 				49AA805F23E1816200276AFD /* model */,
 				49AA804623E1793A00276AFD /* AppDelegate.swift */,
@@ -175,6 +189,8 @@
 				49AA805323E1793D00276AFD /* LaunchScreen.storyboard in Resources */,
 				49AA805023E1793D00276AFD /* Assets.xcassets in Resources */,
 				49AA804E23E1793A00276AFD /* Main.storyboard in Resources */,
+				4989035D23E2D9E70055BF02 /* honolulushizzle-2.png in Resources */,
+				49AA806E23E2CB7700276AFD /* HonoluluFlag.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

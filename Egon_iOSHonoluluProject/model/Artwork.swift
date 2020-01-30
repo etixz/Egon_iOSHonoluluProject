@@ -16,6 +16,7 @@ class Artwork: NSObject, MKAnnotation{
     var artDescription:String
     var title:String?
     var coordinate: CLLocationCoordinate2D
+    var image: UIImage? = nil
     
 
     init(creator: String, date: String, artDescription: String, title: String, coordinate: CLLocationCoordinate2D) {
@@ -25,5 +26,6 @@ class Artwork: NSObject, MKAnnotation{
         self.title = title
         self.coordinate = coordinate
     }
+    
     
 }

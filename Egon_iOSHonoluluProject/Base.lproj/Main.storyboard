@@ -29,7 +29,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" selectedImage="mappin.and.ellipse" id="eoC-2f-QnB"/>
                     <connections>
                         <outlet property="honoluluMapView" destination="FU6-E7-WYL" id="b20-Qe-Oaz"/>
-                        <segue destination="3YF-o3-5Bn" kind="show" id="WKS-AL-4dI"/>
+                        <segue destination="3YF-o3-5Bn" kind="show" identifier="detailsFromMapSegue" id="WKS-AL-4dI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
