@@ -70,10 +70,12 @@ extension TableViewController: UITableViewDataSource{
         if searching{
             let artwork = filteredArt[indexPath.row]
             currentCell.artTitle.text = artwork.title
+            currentCell.artCreator.text = artwork.creator
         }else{
         
         let artwork = artworks[indexPath.row]
         currentCell.artTitle.text = artwork.title
+        currentCell.artCreator.text = artwork.creator
         // Configure the cell...
         }
         return currentCell

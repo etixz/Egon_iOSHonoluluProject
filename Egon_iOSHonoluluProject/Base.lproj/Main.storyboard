@@ -46,23 +46,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INT-hI-x1Y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INT-hI-x1Y">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.99710501269999996" green="0.61685781120000005" blue="0.2955713043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="FlF-kb-NwV" customClass="ArtworkTableViewCell" customModule="Egon_iOSHonoluluProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="FlF-kb-NwV" customClass="ArtworkTableViewCell" customModule="Egon_iOSHonoluluProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FlF-kb-NwV" id="WQF-hk-BFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z94-gZ-yTS">
-                                                    <rect key="frame" x="20" y="13" width="374" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="20" y="13" width="374" height="24"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="19"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyW-V2-eRU">
+                                                    <rect key="frame" x="20" y="45" width="374" height="19"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -70,10 +76,14 @@
                                                 <constraint firstItem="z94-gZ-yTS" firstAttribute="centerX" secondItem="WQF-hk-BFl" secondAttribute="centerX" id="3aG-GD-74k"/>
                                                 <constraint firstItem="z94-gZ-yTS" firstAttribute="trailing" secondItem="WQF-hk-BFl" secondAttribute="trailingMargin" id="4gZ-HE-7iy"/>
                                                 <constraint firstItem="z94-gZ-yTS" firstAttribute="leading" secondItem="WQF-hk-BFl" secondAttribute="leadingMargin" id="6be-KR-2xq"/>
+                                                <constraint firstItem="YyW-V2-eRU" firstAttribute="top" secondItem="z94-gZ-yTS" secondAttribute="bottom" constant="8" id="Akh-mx-1HO"/>
                                                 <constraint firstItem="z94-gZ-yTS" firstAttribute="top" secondItem="WQF-hk-BFl" secondAttribute="top" constant="13" id="T8z-8j-YfT"/>
+                                                <constraint firstAttribute="trailing" secondItem="YyW-V2-eRU" secondAttribute="trailing" constant="20" id="olU-yS-u6m"/>
+                                                <constraint firstItem="YyW-V2-eRU" firstAttribute="leading" secondItem="WQF-hk-BFl" secondAttribute="leading" constant="20" id="vc4-gt-zvy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="artCreator" destination="YyW-V2-eRU" id="Ilk-o3-Rem"/>
                                             <outlet property="artTitle" destination="z94-gZ-yTS" id="ixl-cR-Gl2"/>
                                             <segue destination="3YF-o3-5Bn" kind="show" identifier="showDetailSegue" id="Hut-Qh-6rf"/>
                                         </connections>
@@ -84,11 +94,15 @@
                                     <outlet property="delegate" destination="j3X-eZ-QSO" id="IaX-8E-3FF"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-3v-p8s">
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-3v-p8s">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.99710501269999996" green="0.61685781120000005" blue="0.2955713043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="j3X-eZ-QSO" id="OGQ-ad-aTq"/>
                                 </connections>
@@ -126,32 +140,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t5C-OR-1Zd">
+                                <rect key="frame" x="0.0" y="408" width="414" height="405"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="3YF-o3-5Bn" id="ivb-bc-Otq"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-xx-adm">
+                                <rect key="frame" x="308" y="762" width="86" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="9dH-VP-go9"/>
+                                    <constraint firstAttribute="height" constant="36" id="cIQ-CM-nnB"/>
+                                </constraints>
+                                <state key="normal" title="Full Map View" image="HonoluluFlag.jpg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="zoomOnArtworkSegue" id="cHf-Py-hBa"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgV-5T-Lev">
-                                <rect key="frame" x="0.0" y="273.5" width="414" height="349"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="312"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eyk-Db-TmN">
-                                        <rect key="frame" x="20" y="133" width="374" height="196"/>
+                                        <rect key="frame" x="20" y="134" width="374" height="158"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw7-Pz-iO7">
-                                        <rect key="frame" x="20" y="104" width="57.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="20" y="104" width="62" height="25"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmM-jx-Jrg">
-                                        <rect key="frame" x="20" y="20" width="374" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??/??/????" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrq-GU-aKy">
-                                        <rect key="frame" x="316" y="104" width="77.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="313" y="104" width="80.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
@@ -159,9 +193,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="eyk-Db-TmN" secondAttribute="trailing" constant="20" id="0ur-3h-Lpf"/>
-                                    <constraint firstAttribute="bottom" secondItem="eyk-Db-TmN" secondAttribute="bottom" constant="20" id="5gw-qV-iEc"/>
                                     <constraint firstItem="Bw7-Pz-iO7" firstAttribute="leading" secondItem="tgV-5T-Lev" secondAttribute="leading" constant="20" id="8Lo-KR-TXS"/>
-                                    <constraint firstAttribute="height" constant="349" id="REx-4L-23g"/>
+                                    <constraint firstAttribute="height" constant="312" id="ATQ-DJ-Nn3"/>
+                                    <constraint firstAttribute="bottom" secondItem="eyk-Db-TmN" secondAttribute="bottom" constant="20" id="VKD-CV-B1B"/>
                                     <constraint firstItem="Xrq-GU-aKy" firstAttribute="top" secondItem="tgV-5T-Lev" secondAttribute="top" constant="104" id="X4v-oX-6s0"/>
                                     <constraint firstItem="Bw7-Pz-iO7" firstAttribute="top" secondItem="tgV-5T-Lev" secondAttribute="top" constant="104" id="XKS-Pf-RUI"/>
                                     <constraint firstItem="eyk-Db-TmN" firstAttribute="leading" secondItem="tgV-5T-Lev" secondAttribute="leading" constant="20" id="YnU-VB-CQk"/>
@@ -172,33 +206,18 @@
                                     <constraint firstAttribute="trailing" secondItem="rmM-jx-Jrg" secondAttribute="trailing" constant="20" id="pVR-cZ-mKY"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-xx-adm">
-                                <rect key="frame" x="308" y="744" width="86" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="9dH-VP-go9"/>
-                                    <constraint firstAttribute="height" constant="36" id="cIQ-CM-nnB"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="HonoluluFlag.jpg"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="zoomOnArtworkSegue" id="xm1-tW-JwY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View on map -&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaw-kc-Vd7">
-                                <rect key="frame" x="179" y="751" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gmg-pR-V0N" firstAttribute="trailing" secondItem="5y7-xx-adm" secondAttribute="trailing" constant="20" id="0oF-1n-XHI"/>
                             <constraint firstItem="tgV-5T-Lev" firstAttribute="leading" secondItem="gmg-pR-V0N" secondAttribute="leading" id="5Vp-SO-5xD"/>
-                            <constraint firstItem="gmg-pR-V0N" firstAttribute="bottom" secondItem="Jaw-kc-Vd7" secondAttribute="bottom" constant="41" id="Pwo-KB-SQZ"/>
-                            <constraint firstItem="gmg-pR-V0N" firstAttribute="bottom" secondItem="5y7-xx-adm" secondAttribute="bottom" constant="33" id="cBd-GU-CI2"/>
+                            <constraint firstItem="gmg-pR-V0N" firstAttribute="trailing" secondItem="5y7-xx-adm" secondAttribute="trailing" constant="20" id="APe-Nu-JyN"/>
+                            <constraint firstItem="gmg-pR-V0N" firstAttribute="bottom" secondItem="5y7-xx-adm" secondAttribute="bottom" constant="15" id="Qzq-tF-nZt"/>
+                            <constraint firstItem="t5C-OR-1Zd" firstAttribute="leading" secondItem="gmg-pR-V0N" secondAttribute="leading" id="Ssu-br-GcZ"/>
+                            <constraint firstItem="t5C-OR-1Zd" firstAttribute="top" secondItem="tgV-5T-Lev" secondAttribute="bottom" constant="8" id="TQZ-vi-VF8"/>
+                            <constraint firstItem="t5C-OR-1Zd" firstAttribute="bottom" secondItem="gmg-pR-V0N" secondAttribute="bottom" id="Y5M-Uf-Mse"/>
+                            <constraint firstItem="t5C-OR-1Zd" firstAttribute="trailing" secondItem="gmg-pR-V0N" secondAttribute="trailing" id="ZP6-ei-0vj"/>
                             <constraint firstItem="gmg-pR-V0N" firstAttribute="trailing" secondItem="tgV-5T-Lev" secondAttribute="trailing" id="jh7-HQ-b6o"/>
-                            <constraint firstItem="5y7-xx-adm" firstAttribute="leading" secondItem="Jaw-kc-Vd7" secondAttribute="trailing" constant="8" id="p8J-Kw-vjW"/>
-                            <constraint firstItem="tgV-5T-Lev" firstAttribute="centerY" secondItem="YD5-xR-A3N" secondAttribute="centerY" id="t9h-k6-qrZ"/>
+                            <constraint firstItem="tgV-5T-Lev" firstAttribute="top" secondItem="gmg-pR-V0N" secondAttribute="top" id="ph8-vz-czJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gmg-pR-V0N"/>
                     </view>
@@ -208,6 +227,7 @@
                         <outlet property="artDateLbl" destination="Xrq-GU-aKy" id="gmX-u1-wJa"/>
                         <outlet property="artDescriptionTV" destination="eyk-Db-TmN" id="HCR-h7-K0w"/>
                         <outlet property="artTitleLbl" destination="rmM-jx-Jrg" id="KxW-iD-K4O"/>
+                        <outlet property="artworkMapView" destination="t5C-OR-1Zd" id="K8w-5f-eUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czs-V4-jCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtG-zf-ReW">
-                                <rect key="frame" x="-20" y="169" width="454" height="279"/>
+                                <rect key="frame" x="-20" y="171.5" width="454" height="279"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8HV-ww-r8G">
                                         <rect key="frame" x="20" y="20" width="414" height="244"/>
@@ -247,20 +267,20 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Honolulu!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4J-PS-OL3">
-                                <rect key="frame" x="20" y="126" width="374" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <rect key="frame" x="20" y="126" width="374" height="37.5"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GjZ-sv-Gmg">
-                                <rect key="frame" x="20" y="436" width="374" height="321"/>
+                                <rect key="frame" x="20" y="438.5" width="374" height="321"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="321" id="1J2-0b-cmd"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -322,6 +342,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.99710501269999996" green="0.61685781120000005" blue="0.2955713043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -345,6 +368,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99710501269999996" green="0.61685781120000005" blue="0.2955713043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -367,6 +393,7 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.99710501269999996" green="0.61685781120000005" blue="0.2955713043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -388,6 +415,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hut-Qh-6rf"/>
-        <segue reference="xm1-tW-JwY"/>
+        <segue reference="cHf-Py-hBa"/>
     </inferredMetricsTieBreakers>
 </document>

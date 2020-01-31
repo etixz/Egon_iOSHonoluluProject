@@ -11,6 +11,7 @@ import UIKit
 class ArtworkTableViewCell: UITableViewCell{
     
     @IBOutlet weak var artTitle: UILabel!
-    @IBOutlet weak var artImage: UIImageView!
+    @IBOutlet weak var artCreator: UILabel!
+    
     
 }

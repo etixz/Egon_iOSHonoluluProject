@@ -27,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         else{
             honoluluMapView.addAnnotations(artworks)
-            let visRegion = MKCoordinateRegion.init(center: artworkToZoomInOn!.coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+            let visRegion = MKCoordinateRegion.init(center: artworkToZoomInOn!.coordinate, latitudinalMeters: 50000, longitudinalMeters: 50000)
             honoluluMapView.region = visRegion
             artworks.removeAll()
         }
