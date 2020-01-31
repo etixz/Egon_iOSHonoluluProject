@@ -84,8 +84,6 @@ extension TableViewController: UITableViewDataSource{
     // MARK: - SearchBar
 
  extension TableViewController: UISearchBarDelegate{
-    
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         if searchText.isEmpty{
             searching = false
