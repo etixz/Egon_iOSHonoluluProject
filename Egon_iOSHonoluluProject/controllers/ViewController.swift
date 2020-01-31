@@ -14,16 +14,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var honoluluMapView: MKMapView!
     var artworks = [Artwork]()
     let locationManager = CLLocationManager.init()
-    
+    var artworkToZoomInOn:Artwork?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if artworks.isEmpty{
         artworks = DAO.sharedInstance.getAllArtworks()
-        
         honoluluMapView.addAnnotations(artworks)
         let visRegion = MKCoordinateRegion.init(center: CLLocationCoordinate2D(latitude: 21.3972222, longitude: -157.9733333), latitudinalMeters: 50000, longitudinalMeters: 50000)
         honoluluMapView.region = visRegion
+        }
+        else{
+            honoluluMapView.addAnnotations(artworks)
+            let visRegion = MKCoordinateRegion.init(center: artworkToZoomInOn!.coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+            honoluluMapView.region = visRegion
+            artworks.removeAll()
+        }
     }
     
     func registerMapAnnotationViews(){
@@ -47,9 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             customView.canShowCallout = true
             let rightButton = UIButton(type: .detailDisclosure)
             customView.rightCalloutAccessoryView = rightButton
-            
-            
-            
+        
             return customView
             }
         }

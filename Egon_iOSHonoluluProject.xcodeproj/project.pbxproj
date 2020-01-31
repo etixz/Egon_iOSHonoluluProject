@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4989035D23E2D9E70055BF02 /* honolulushizzle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */; };
+		4989036323E2F2680055BF02 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989036223E2F2680055BF02 /* AboutViewController.swift */; };
+		4989036B23E2F52F0055BF02 /* honoluluSlide2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4989036823E2F52F0055BF02 /* honoluluSlide2.jpg */; };
+		4989036C23E2F52F0055BF02 /* honoluluSlide3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4989036923E2F52F0055BF02 /* honoluluSlide3.jpg */; };
+		4989036D23E2F52F0055BF02 /* honoluluSlide4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4989036A23E2F52F0055BF02 /* honoluluSlide4.jpg */; };
 		49AA804723E1793A00276AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804623E1793A00276AFD /* AppDelegate.swift */; };
 		49AA804923E1793A00276AFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804823E1793A00276AFD /* SceneDelegate.swift */; };
 		49AA804B23E1793A00276AFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA804A23E1793A00276AFD /* ViewController.swift */; };
@@ -26,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "honolulushizzle-2.png"; sourceTree = "<group>"; };
+		4989036223E2F2680055BF02 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4989036823E2F52F0055BF02 /* honoluluSlide2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honoluluSlide2.jpg; sourceTree = "<group>"; };
+		4989036923E2F52F0055BF02 /* honoluluSlide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honoluluSlide3.jpg; sourceTree = "<group>"; };
+		4989036A23E2F52F0055BF02 /* honoluluSlide4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honoluluSlide4.jpg; sourceTree = "<group>"; };
 		49AA804323E1793A00276AFD /* Egon_iOSHonoluluProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Egon_iOSHonoluluProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AA804623E1793A00276AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AA804823E1793A00276AFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,9 @@
 			children = (
 				4989035C23E2D9E70055BF02 /* honolulushizzle-2.png */,
 				49AA806D23E2CB7700276AFD /* HonoluluFlag.jpg */,
+				4989036823E2F52F0055BF02 /* honoluluSlide2.jpg */,
+				4989036923E2F52F0055BF02 /* honoluluSlide3.jpg */,
+				4989036A23E2F52F0055BF02 /* honoluluSlide4.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 				49AA804A23E1793A00276AFD /* ViewController.swift */,
 				49AA806723E18D4300276AFD /* TableViewController.swift */,
 				49AA806B23E1D86C00276AFD /* ArtDetailViewController.swift */,
+				4989036223E2F2680055BF02 /* AboutViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -187,6 +199,9 @@
 			files = (
 				49AA805E23E17A1500276AFD /* Settings.bundle in Resources */,
 				49AA805323E1793D00276AFD /* LaunchScreen.storyboard in Resources */,
+				4989036C23E2F52F0055BF02 /* honoluluSlide3.jpg in Resources */,
+				4989036B23E2F52F0055BF02 /* honoluluSlide2.jpg in Resources */,
+				4989036D23E2F52F0055BF02 /* honoluluSlide4.jpg in Resources */,
 				49AA805023E1793D00276AFD /* Assets.xcassets in Resources */,
 				49AA804E23E1793A00276AFD /* Main.storyboard in Resources */,
 				4989035D23E2D9E70055BF02 /* honolulushizzle-2.png in Resources */,
@@ -204,6 +219,7 @@
 				49AA806423E184C800276AFD /* Artwork.swift in Sources */,
 				49AA806823E18D4300276AFD /* TableViewController.swift in Sources */,
 				49AA806C23E1D86C00276AFD /* ArtDetailViewController.swift in Sources */,
+				4989036323E2F2680055BF02 /* AboutViewController.swift in Sources */,
 				49AA806223E1840100276AFD /* DAO.swift in Sources */,
 				49AA806A23E18E1900276AFD /* ArtworkTableViewCell.swift in Sources */,
 				49AA804B23E1793A00276AFD /* ViewController.swift in Sources */,

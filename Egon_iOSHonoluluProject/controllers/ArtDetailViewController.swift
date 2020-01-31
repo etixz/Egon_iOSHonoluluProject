@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class ArtDetailViewController: UIViewController{
     
@@ -27,5 +28,12 @@ class ArtDetailViewController: UIViewController{
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "zoomOnArtworkSegue"{
+            let detailsVC = segue.destination as! ViewController
+            detailsVC.artworkToZoomInOn = artworkToUpdate
+            detailsVC.artworks.append(artworkToUpdate!)
+        }
+    }
     
 }

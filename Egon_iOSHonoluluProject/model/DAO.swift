@@ -8,11 +8,34 @@
 
 import Foundation
 import MapKit
+import CoreData
 
 class DAO{
     
     static var sharedInstance:DAO = DAO.init()
     private init(){}
+    
+    lazy var persistentContainer:NSPersistentContainer = {
+        let container = NSPersistentContainer.init(name: "Model")
+        container.loadPersistentStores(completionHandler: {
+            (storeDescription, error) in
+            //hierin komt fouthandeling
+        })
+        return container
+    }()     //functie uitvoeren met haakjes
+    
+    //zorgen voor opslag, wijzigingen in app doorduwen naar DataBase
+    private func saveContext(){
+        let context = persistentContainer.viewContext
+        if context.hasChanges{
+            do {
+                try context.save()
+            } catch {
+                let fout = error as NSError
+                print("fout \(fout.description)")
+            }
+        }
+    }
     
     func getAllArtworks() -> [Artwork]{
     var artList = [Artwork]()
@@ -55,7 +78,7 @@ class DAO{
                 }else{
                     long = 1
                 }
-                
+               
                 let description = item.value(forKey: "description") as! String
                 let artwork = Artwork.init(creator: creator, date: date, artDescription: description, title: title, coordinate: CLLocationCoordinate2DMake(lat,long))
                 artList.append(artwork)
@@ -65,4 +88,5 @@ class DAO{
         }
         return artList
     }
+    
 }
